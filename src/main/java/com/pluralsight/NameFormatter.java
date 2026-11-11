@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class StaticClasses {
+public class NameFormatter {
 
     private String firstName;
     private String lastName;
@@ -8,7 +8,21 @@ public class StaticClasses {
     private String middleName;
     private String suffix;
 
-    public static void NameFormatter() {
-        
+    private NameFormatter() {
+
     }
+
+    public static String format(String firstName, String lastName, String prefix, String middleName, String suffix) {
+        return lastName + ", " + prefix + " " + firstName + " " + middleName + " " + suffix;
+    }
+    public static String format(String firstName, String lastName) {
+        return lastName + ", " + firstName;
+    }
+
+    /*public static String format(String fullName) {
+        String newName;
+        if ()
+    }*/
+
+
 }
