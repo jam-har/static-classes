@@ -41,19 +41,11 @@ public class NameFormatter {
             fullName = lastName + "," + firstName + " " + middleName + ", " + suffix;
         }
         else {
-            switch(newName.length) {
-                case 4 -> {
-                    fullName =  lastName + "," + firstName + " " + middleName;
-                }
-                case 3 -> {
-                    fullName =  lastName + ", " + firstName;
-                }
-                default -> System.out.println("error");
-            }
+            fullName =  lastName + "," + firstName + " " + middleName;
 
         }
 
-        return fullName;
+        return fullName.trim();
 
     }
 
